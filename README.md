@@ -1,15 +1,15 @@
-# Image Processing Program
+### Image Processing Program
 
 A simple image processing programm with some filters in python lang.
 
-## Filters:
+##### Filters:
 
---> Sobel
---> Low Passing
---> High Passing
---> Labeling
+* Sobel
+* Low Passing
+* High Passing
+* Labeling
 
-## Requirements:
+##### Requirements:
 
---> Numpy
---> SimpleCV
+* Numpy
+* SimpleCV
