@@ -11,6 +11,6 @@ A simple image processing programm with some filters in python lang.
 
 ##### Requirements:
 
-* Numpy
 * SimpleCV
 * Matplotlib
+* Scipy

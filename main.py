@@ -4,8 +4,8 @@
 '''
 
 from SimpleCV import *
-from pylab import *
-import handler as hnd
+from handler import *
+
 
 if __name__ == '__main__':
 
@@ -15,7 +15,7 @@ if __name__ == '__main__':
     # init display
     disp = Display()
 
-    # Show imagem while user didn't click
+    # Show image while user didn't click
     while disp.isNotDone():
             # get webcam image
             img = cam.getImage()
@@ -29,11 +29,11 @@ if __name__ == '__main__':
     # Load Image
     selfie = Image('selfie.png')
 
-    # Show and Save Image Histogram
-    gray = selfie.toGray()
-    hist = gray.histogram(255)
-    plot(hist)
-    savefig('hist.png')
+    # Instantiate handler object
+    hnd = Handler()
 
-    # instantiate handler object
-    filter_hnd = hnd.Handler()
+    # Show and Save Image Histogram
+    hnd.save_histogram(selfie)
+
+    # Sobel Filter
+    hnd.sobel('selfie.png')
