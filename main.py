@@ -4,6 +4,7 @@
 '''
 
 from SimpleCV import *
+from pylab import *
 import handler as hnd
 
 if __name__ == '__main__':
@@ -28,15 +29,11 @@ if __name__ == '__main__':
     # Load Image
     selfie = Image('selfie.png')
 
-    # create handler object
+    # Show and Save Image Histogram
+    gray = selfie.toGray()
+    hist = gray.histogram(255)
+    plot(hist)
+    savefig('hist.png')
+
+    # instantiate handler object
     filter_hnd = hnd.Handler()
-
-    # Apply Filters
-    lpf = filter_hnd.low_passing(selfie)
-    #lpf.save('low_passing_selfie.png')
-
-    hpf = filter_hnd.low_passing(selfie)
-    #hpf.save('high_passing_selfie.png')
-
-    sobel = filter_hnd.low_passing(selfie)
-    #sobel.save('sobel_selfie.png')
