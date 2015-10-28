@@ -13,3 +13,4 @@ A simple image processing programm with some filters in python lang.
 
 * Numpy
 * SimpleCV
+* Matplotlib
